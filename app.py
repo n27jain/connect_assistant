@@ -4,10 +4,11 @@ from cameraTest import letsDoIt
 app = Flask(__name__)
 
 @app.route('/prime', methods=['POST'])
-def switch():
-    query = request.json.get('obj',"NA")
+def prime():
+    """Endpoint to process incoming requests. 
+    (POST requests with JSON mapping 'obj' to command)"""
     trigger(None)
-    # Process query and turn appliance on/off with RPi.GPIO
+    return jsonify({"SUCCESS":True})
 
 
 def trigger(command_string):
