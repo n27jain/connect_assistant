@@ -20,6 +20,7 @@ def trigger(command_string):
     command_words = set(command_string.lower().split(" "))
     # Set status to 'on' if the word 'on' is present in the command (command_words)
     # Iterate over all appliances (ie. keys in words)
+    print("this shoudl be working")
     letsDoIt()
 
 
